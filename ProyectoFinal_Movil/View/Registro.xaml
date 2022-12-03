@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal_Movil.View.Registro">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="heatbox2.jpg" Aspect="Fill" Opacity="0.2"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="heatbox.jpg" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30" />
+
+
+                <StackLayout Grid.Row="1" Padding="50,30">
+                    <Entry Placeholder="Nombre" PlaceholderColor="White" Text="{Binding txtNom, Mode=TwoWay}"/>
+                    <Entry Placeholder="Correo Electronico" PlaceholderColor="White" Text="{Binding txtCorreo, Mode=TwoWay}"/>
+                    <Entry Placeholder="Edad" PlaceholderColor="White" Text="{Binding Edad, Mode=TwoWay}"/>
+                    <Entry Placeholder="Peso Corporal" PlaceholderColor="White" Text="{Binding txtPeso, Mode=TwoWay}"/>
+                    <Entry Placeholder="Plan de Entreno" PlaceholderColor="White" Text="{Binding txtPlan, Mode=TwoWay}"/>
+                    <Entry Placeholder="Usuario" PlaceholderColor="White" Text="{Binding txtUser, Mode=TwoWay}"/>
+                    <Entry Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True" Text="{Binding txtPass, Mode=TwoWay}"/>
+                    <Button Text="Registrar" BackgroundColor="ForestGreen" BorderRadius="20" Command="{Binding RegisterCommand}" />
+                    
+                    <StackLayout>
+                        <Button Text="Regresar" TextColor="White" BackgroundColor="OrangeRed" FontSize="Medium" Command="{Binding RegresarCommand}"/>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="CenterAndExpand" Margin="130,20,0,30">
+                        <Label Text="Ayuda!" FontSize="Large" FontAttributes="Italic" TextColor="red"/>
+                    </StackLayout>
+                </StackLayout>
+                
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
