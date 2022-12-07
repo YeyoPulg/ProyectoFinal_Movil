@@ -2,9 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal_Movil.View.Detalles">
-    <StackLayout>
-        <Label Text="{Binding Nombre}"></Label>
-        <Label Text="{Binding Apellido}"></Label>
-        <Label Text="{Binding Edad}"></Label>
-    </StackLayout>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout>
+                    <Image Grid.Row="0" Source="heatbox.jpg" WidthRequest="100" HeightRequest="100" Margin="0,20,0,0"/>
+                    <Label Text="Maestro Yessid Pulgarin" HorizontalTextAlignment="Center" TextColor="YellowGreen"/>
+                </StackLayout>
+                
+
+                <StackLayout Grid.Row="1" Padding="10,20" Orientation="Horizontal" HorizontalOptions="Center">                   
+                    <Label FontSize="Large" Text="{Binding Nombre}"></Label>
+                    <Label FontSize="Large" Text="{Binding Apellido}"></Label>
+                    <Label FontSize="Large" Text="Has reservado con Yessid Pulgarin"></Label>
+                </StackLayout>                
+            </Grid>
+         </Grid>  
+    </ContentPage.Content>
 </ContentPage>
+
+
+

@@ -28,12 +28,14 @@ namespace ProyectoFinal_Movil.View
         {
             if(e.SelectedItem != null)
             {
-                PersonasModel modelo = (PersonasModel)e.SelectedItem;
-                //Navigation.PushAsync(new Detalles(modelo));
+                PersonasModel modelo = (PersonasModel)e.SelectedItem;                
                 contex.Nombre = modelo.Nombre;
                 contex.Apellido = modelo.Apellido;
                 contex.Edad = modelo.Edad;
                 contex.Id = modelo.Id;
+                contex.Hora = modelo.Hora;
+                contex.Fecha = modelo.Fecha;
+                Navigation.PushAsync(new Detalles(modelo));
             }
         }
     }

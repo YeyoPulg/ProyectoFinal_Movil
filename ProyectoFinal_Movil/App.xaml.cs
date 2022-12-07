@@ -30,7 +30,7 @@ namespace ProyectoFinal_Movil
         {
             InitializeComponent();
 
-            MainPage = MainPage = new NavigationPage(new Inicio());
+            MainPage = MainPage = new NavigationPage(new PersonaPage());
         }
 
         protected override void OnStart()

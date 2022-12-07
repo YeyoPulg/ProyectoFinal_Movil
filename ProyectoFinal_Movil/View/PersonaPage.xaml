@@ -33,8 +33,8 @@
                         <TimePicker x:Name="Hora1"  FontSize="Medium" Format="" TextColor="White" />
                         <!--<Label IsVisible="true" BindingContext="{x:Reference Hora1}" Text="{Binding Hora}" TextColor="Green"></Label>-->
                         <!--<Entry Text="{Binding Hora}"></Entry>-->
-                        <Label x:Name="lblText" Text="{Binding Time, StringFormat= 'Reservado a las {0} para:' }" BindingContext="{x:Reference Hora1}"/>
-                        <Label Text="{Binding NombreCompleto}"></Label>
+                        <Label x:Name="lblText" Text="{Binding Time, StringFormat= 'Reservado a las {0} para:' }" BindingContext="{x:Reference Hora1}" TextColor="Red"/>
+                        <Label Text="{Binding NombreCompleto}" ></Label>
 
                         <StackLayout Margin="0,10,0,0">
                             <Button Text="Reservar" BackgroundColor="YellowGreen" BorderRadius="20" Command="{Binding GuardarCommand}"></Button>
@@ -48,7 +48,7 @@
                         <ListView x:Name="L_Personas" ItemsSource="{Binding Personas}">
                             <ListView.ItemTemplate>                                
                                 <DataTemplate>
-                                    <TextCell Detail="{Binding NombreCompleto}" Text="{Binding Edad}" >
+                                    <TextCell Detail="{Binding NombreCompleto}" DetailColor="YellowGreen" Text="{Binding Hora, StringFormat= 'Reservado a las {0} para:' }" BindingContext="{x:Reference Hora1}" >
 
                                     </TextCell>
                                 </DataTemplate>
